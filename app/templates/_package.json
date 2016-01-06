@@ -1,0 +1,25 @@
+{
+  "name": "<%= _.slugify(appname) %>",
+  "version": "0.0.1",
+  "author": "Emmanuel Barachant <emmbar.dev@gmail.com>",
+  "description": "Forked from jolicode/generator-joli-symfony by Laurent Brunet <lbrunet@jolicode.com>",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    <% if (sassBrunch) { %>"sass-brunch": "^1.8.10",<% } %>
+    <% if (uglifyJsBrunch) { %>"uglify-js-brunch": "^1.7.8",<% } %>
+    <% if (babelBrunch) { %>"babel-brunch": "^5.1.2",<% } %>
+    <% if (postcssBrunch) { %>
+    "postcss-brunch": "^0.5.0",
+    "autoprefixer": "^6.2.3",
+    "csswring": "^4.1.1",
+    <% } %>
+    <% if (browserSyncBrunch) { %>"browser-sync-brunch": "0.0.9",<% } %>
+    "brunch": "^1.8.3",
+    "clean-css-brunch": "^1.7.2",
+    "javascript-brunch": "^1.7.1"
+  }
+}

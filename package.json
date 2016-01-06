@@ -1,0 +1,30 @@
+{
+  "name": "generator-brunch-symfony",
+  "version": "1.1.0",
+  "description": "Scaffolds a standard Symfony2 application with Yeoman. Forked from generator-joli-symfony to remove grunt and gulp, only brunch survive. Add post-css & browserSync.",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "imanu/generator-brunch-symfony",
+  "author": {
+    "name": "Barachant Emmanuel",
+    "email": "",
+    "url": "https://github.com/imanu"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^0.5.0",
+    "fs-extra": "^0.26.4",
+    "js-yaml": "^3.2.3",
+    "rimraf": "^2.4.2",
+    "yeoman-generator": "^0.18.0",
+    "yosay": "^0.3.0"
+  }
+}
