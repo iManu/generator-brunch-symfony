@@ -1,6 +1,6 @@
 {
   "name": "generator-brunch-symfony",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Scaffolds a standard Symfony2 application with Yeoman.\n\rA generator-joli-symfony fork/clone without grunt and gulp, only brunch. Add post-css & browserSync.",
   "license": "MIT",
   "main": "app/index.js",
