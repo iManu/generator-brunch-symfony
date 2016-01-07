@@ -56,9 +56,32 @@ Assets are stored in the **app/Resources/** folder :
 
 ## Getting Started
 
-- Install: `npm install -g yo`
+### Yeoman
+
+Install all the stuff with Yo generator.
+
+- Install: `npm install -g yo bower grunt-cli gulp`
 - Install: `npm install -g generator-brunch-symfony`
+
+In the working dir you want :
+
 - Run: `yo brunch-symfony --force`
+
+Now all the files and folders are alive.
+
+### Symfony
+
+In your working folder root previoulsy generated :
+
+- Run: `php bin/console server:run`
+
+Now Symfony is running on it's own server (localhost:8000)
+
+### Brunch
+
+- Run (same folder, in other terminal window) : `brunch watch`
+
+Now BrowserSync is alive, open browser tab on the local port BS running (:3000 by default)
 
 ## Contribution
 
