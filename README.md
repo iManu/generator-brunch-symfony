@@ -83,6 +83,18 @@ Now Symfony is running on it's own server (localhost:8000)
 
 Now BrowserSync is alive, open browser tab on the local port BS running (:3000 by default)
 
+## Front-end ?
+
+I am not a Back-end engineer. I have poor knowledge of Symfony (just that the Front enginner need to know about, that's all), but I know Twig templating engine and I love it.  
+This project is Front-end oriented, because as you surely know IRL the client has already made his choice : Symfony or burst !
+Here we can work in -almost- real environment. Maybe, if communication is enabled between Back and Front guy's (Hello Slack) then we can work on same repo ? Dreams are not so unreal…
+
+* Frontend stuff is located in **app/Resources/[js, scss, views, assets]**.
+* Brunch auto generate builded assets to web/[js, css] and copy app/Resources/assets/ content directly in web folder root.
+* BrowserSync watch any modifications in web/[js, css] & app/Resources/views, auto inject or reload page according to the case.
+
+In conslusion, this not the place to experienced advanced Javascript stuffs. As I know, Symfony is a really good performer to do complex things even it's in server side because of it's fabulous cache systems modules addons. So you can experienced strong and modern CSS, improve HTML5 wellformed architecture, etc. but don't expect to walk on the moon 👽 with JS here, I think.
+
 ## Contribution
 
 Feel free to fork, or clone for a new start. I really don't know if I can maintain this project for weeks and weeks.
