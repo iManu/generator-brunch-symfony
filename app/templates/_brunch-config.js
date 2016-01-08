@@ -46,7 +46,7 @@ exports.config = {
     }<% if (postcssBrunch) { %>,
     postcss: {
       processors: [
-        require('autoprefixer')(['last 8 versions']),
+        require('autoprefixer')(['last 2 versions', 'ie >= 9', 'and_chr >= 2.3']),
         require('csswring')
       ]
     }<% } %><% if (browserSyncBrunch) { %>,
