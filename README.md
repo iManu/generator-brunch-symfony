@@ -38,7 +38,7 @@ Mandatory dependencies :
   * [babel-brunch](https://github.com/babel/babel-brunch)
   * [browser-sync-brunch](https://github.com/ocombe/browser-sync-brunch)
 
-* Bootstrap-sass-official
+* Bootstrap-sass-official OR Foundation Sites
 
 ## Default workflow
 

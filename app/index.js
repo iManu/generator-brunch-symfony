@@ -180,7 +180,41 @@ module.exports = yeoman.generators.Base.extend({
 
   },
 
-  askBootStrapSass: function () {
+  askFrontFramework: function () {
+    var done = this.async();
+
+    var prompts = [{
+      type: 'checkbox',
+      name: 'frontFramework',
+      message: 'Front-end framework ?',
+      choices: [
+        {
+          name:  'BootStrap Sass',
+          value: 'bootStrapSass',
+          checked: true
+        },
+        {
+          name: 'Foundation sites',
+          value: 'foundation',
+          checked: false
+        }
+      ]
+    }];
+
+    this.prompt(prompts, function (answers) {
+      function hasFeature(feat) {
+        return answers.frontFramework.indexOf(feat) !== -1;
+      }
+
+      this.bootStrapSass = hasFeature('bootStrapSass');
+      this.foundation = hasFeature('foundation');
+
+      done();
+    }.bind(this));
+
+  },
+
+  /*askBootStrapSass: function () {
     var done = this.async();
 
     var prompts = [{
@@ -194,7 +228,7 @@ module.exports = yeoman.generators.Base.extend({
       this.bootStrapSass = answers.bootStrapSass;
       done();
     }.bind(this));
-  },
+  },*/
 
   _unzip: function (archive, destination, opts, cb) {
     if (_.isFunction(opts) && !cb) {
@@ -276,7 +310,7 @@ module.exports = yeoman.generators.Base.extend({
   checkBower: function () {
     this.globalBower = false;
 
-    if (this.bootStrapSass) {
+    if (this.bootStrapSass || this.foundation) {
       var done = this.async();
 
       child_process.execFile('bower', ['-v'], function (error, stdout, stderr) {
@@ -383,6 +417,18 @@ module.exports = yeoman.generators.Base.extend({
             console.log('exec error: ' + error);
           } else {
             console.log(chalk.green('[bootstrap-sass-official] installed!'));
+          }
+        });
+      }
+    },
+
+    addFoundation: function () {
+      if (this.foundation && this.globalBower) {
+        child_process.exec('bower install foundation-sites --save', function (error, stdout, stderr) {
+          if (error !== null) {
+            console.log('exec error: ' + error);
+          } else {
+            console.log(chalk.green('[foundation-sites] installed!'));
           }
         });
       }
