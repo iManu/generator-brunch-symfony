@@ -38,7 +38,9 @@ Mandatory dependencies :
   * [babel-brunch](https://github.com/babel/babel-brunch)
   * [browser-sync-brunch](https://github.com/ocombe/browser-sync-brunch)
 
-* Bootstrap-sass-official OR Foundation Sites
+* Front-end framework:
+  * [Bootstrap-sass-official](https://github.com/twbs/bootstrap-sass)
+  * [Foundation Sites](http://foundation.zurb.com/sites/docs/)
 
 ## Default workflow
 
