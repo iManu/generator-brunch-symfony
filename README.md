@@ -7,6 +7,7 @@ Initialy forked from [generator-joli-symfony](https://github.com/jolicode/genera
 
 * Remove grunt and gulp, only brunch can survive !
 * Add post-css & browserSync
+* Add Foundation Sites as alternative to Bootstrap Sass
 * Overwrite basic html.twig files after Sensio zip download
 
 I remove too much things to pretend this project can be pull-requested, so it is not forked anymore on my github account.
@@ -87,7 +88,7 @@ Now BrowserSync is alive, open browser tab on the local port BS running (:3000 b
 
 ## Front-end ?
 
-I am not a Back-end engineer. I have poor knowledge of Symfony (just that the Front enginner need to know about, that's all), but I know Twig templating engine and I love it.
+I am not a Back-end engineer. I have poor knowledge of Symfony (just that the Front engineer need to know about, that's all), but I know Twig templating engine and I love it.
 This project is Front-end oriented, because as you surely know IRL the client has already made his choice : Symfony or burst !
 Here we can work in -almost- real environment. Maybe, if communication is enabled between Back and Front guy's (Hello Slack) then we can work on same repo ? Dreams are not so unreal…
 
