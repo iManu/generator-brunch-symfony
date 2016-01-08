@@ -1,7 +1,7 @@
 {
   "name": "generator-brunch-symfony",
   "version": "1.2.1",
-  "description": "Scaffolds a standard Symfony2 application with Yeoman.\n\rA generator-joli-symfony fork/clone without grunt and gulp, only brunch. Add post-css & browserSync, Foundation-sites framework.",
+  "description": "Scaffolds a standard Symfony2 application with Yeoman.\n\rA generator-joli-symfony fork/clone without grunt and gulp, only brunch. Add post-css & browserSync, Foundation-sites & KNACSS frameworks.",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "imanu/generator-brunch-symfony",
@@ -21,7 +21,8 @@
     "brunch",
     "symfony",
     "bootstrap sass",
-    "foundation"
+    "foundation",
+    "knacss"
   ],
   "dependencies": {
     "chalk": "^0.5.0",

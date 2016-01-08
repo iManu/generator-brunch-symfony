@@ -197,6 +197,11 @@ module.exports = yeoman.generators.Base.extend({
           name: 'Foundation sites',
           value: 'foundation',
           checked: false
+        },
+        {
+          name: 'KNACSS',
+          value: 'knacss',
+          checked: false
         }
       ]
     }];
@@ -208,27 +213,12 @@ module.exports = yeoman.generators.Base.extend({
 
       this.bootStrapSass = hasFeature('bootStrapSass');
       this.foundation = hasFeature('foundation');
+      this.knacss = hasFeature('knacss');
 
       done();
     }.bind(this));
 
   },
-
-  /*askBootStrapSass: function () {
-    var done = this.async();
-
-    var prompts = [{
-      type: 'confirm',
-      name: 'bootStrapSass',
-      message: 'Would you like to use "BootStrap Sass"?',
-      default: true
-    }];
-
-    this.prompt(prompts, function (answers) {
-      this.bootStrapSass = answers.bootStrapSass;
-      done();
-    }.bind(this));
-  },*/
 
   _unzip: function (archive, destination, opts, cb) {
     if (_.isFunction(opts) && !cb) {
@@ -310,7 +300,7 @@ module.exports = yeoman.generators.Base.extend({
   checkBower: function () {
     this.globalBower = false;
 
-    if (this.bootStrapSass || this.foundation) {
+    if (this.bootStrapSass || this.foundation || this.knacss) {
       var done = this.async();
 
       child_process.execFile('bower', ['-v'], function (error, stdout, stderr) {
@@ -429,6 +419,18 @@ module.exports = yeoman.generators.Base.extend({
             console.log('exec error: ' + error);
           } else {
             console.log(chalk.green('[foundation-sites] installed!'));
+          }
+        });
+      }
+    },
+
+    addKnacss: function () {
+      if (this.knacss && this.globalBower) {
+        child_process.exec('bower install knacss --save', function (error, stdout, stderr) {
+          if (error !== null) {
+            console.log('exec error: ' + error);
+          } else {
+            console.log(chalk.green('[KNACSS] installed!'));
           }
         });
       }

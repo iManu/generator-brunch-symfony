@@ -7,7 +7,7 @@ Initialy forked from [generator-joli-symfony](https://github.com/jolicode/genera
 
 * Remove grunt and gulp, only brunch can survive !
 * Add post-css & browserSync
-* Add Foundation Sites as alternative to Bootstrap Sass
+* Add Foundation Sites & Knacss as alternatives to Bootstrap Sass
 * Overwrite basic html.twig files after Sensio zip download
 
 I remove too much things to pretend this project can be pull-requested, so it is not forked anymore on my github account.
@@ -42,6 +42,7 @@ Mandatory dependencies :
 * Front-end framework:
   * [Bootstrap-sass-official](https://github.com/twbs/bootstrap-sass)
   * [Foundation Sites](http://foundation.zurb.com/sites/docs/)
+  * [KNACSS](https://github.com/alsacreations/KNACSS/)
 
 ## Default workflow
 
@@ -90,7 +91,7 @@ Now BrowserSync is alive, open browser tab on the local port BS running (:3000 b
 
 I am not a Back-end engineer. I have poor knowledge of Symfony (just that the Front engineer need to know about, that's all), but I know Twig templating engine and I love it.
 This project is Front-end oriented, because as you surely know IRL the client has already made his choice : Symfony or burst !
-Here we can work in -almost- real environment. Maybe, if communication is enabled between Back and Front guy's (Hello Slack) then we can work on same repo ? Dreams are not so unreal…
+Here we can work in -almost- real environment. Maybe, if communication is enabled between Back and Front guy's (Hello Slack) then we can work on same repo ? 🎏 Dreams are not so unreal…
 
 * Frontend stuff is located in **app/Resources/[js, scss, views, assets]**.
 * Brunch auto generate builded assets to web/[js, css] and copy app/Resources/assets/ content directly in web folder root.
