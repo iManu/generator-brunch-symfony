@@ -1,6 +1,8 @@
 Brunch Symfony - Symfony2
 =========================
 
+[![NPM](https://nodei.co/npm/generator-brunch-symfony.png)](https://npmjs.org/package/generator-brunch-symfony)
+
 ## Intro
 
 Initialy forked from [generator-joli-symfony](https://github.com/jolicode/generator-joli-symfony) by Laurent Brunet <lbrunet@jolicode.com> 👍
